@@ -1,0 +1,17 @@
+{
+  "name": "gkopg4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.1",
+    "nodemon": "^2.0.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon loadBalancer.js 8000 & nodemon server.js 8001 & nodemon server.js 8002 & nodemon server.js 8003 & nodemon server.js 8004"
+  },
+  "author": "",
+  "license": "ISC"
+}
