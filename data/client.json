@@ -3,63 +3,28 @@
     "clientID": "1",
     "firstName": "Alexandra",
     "lastName": "Gonzalez",
-    "streetAddress": "Olgagade",
-    "City": "Herning"
+    "streetAddress": "Prebenvænge",
+    "City": "Frederiksberg"
   },
   {
     "clientID": "2",
     "firstName": "Lærke",
-    "lastName": "Pedersen",
-    "streetAddress": "Stjernegade",
+    "lastName": "Stald",
+    "streetAddress": "verduesvej",
     "City": "Amager"
   },
   {
     "clientID": "3",
     "firstName": "Laura",
-    "lastName": "Bøjer",
-    "streetAddress": "Vissengade",
-    "City": "Kbh-Ø"
-  },
-  {
-    "clientID": "4",
-    "firstName": "Nico",
-    "lastName": "Jansen",
-    "streetAddress": "Flipperflup",
-    "City": "Luxemborg"
+    "lastName": "Boejer",
+    "streetAddress": "Vissensvej",
+    "City": "Kbh Ø"
   },
   {
     "clientID": "5",
-    "firstName": "Søren",
-    "lastName": "Georg",
-    "streetAddress": "kåås vænge",
-    "City": "23"
-  },
-  {
-    "clientID": "6",
-    "firstName": "Fie",
-    "lastName": "Fiesen",
-    "streetAddress": "vibens",
-    "City": "Kastrup"
-  },
-  {
-    "clientID": "7",
-    "firstName": "xx",
-    "lastName": "xx",
-    "streetAddress": "xx",
-    "City": "xx"
-  },
-  {
-    "clientID": "8",
-    "firstName": "Sille",
-    "lastName": "Jensen",
-    "streetAddress": "galgebakken",
-    "City": "Albertslund"
-  },
-  {
-    "clientID": "10",
-    "firstName": "Carin",
-    "lastName": "Lemvig",
-    "streetAddress": "Skeller",
-    "city": "Skelskær"
+    "firstName": "Kasper",
+    "lastName": "Kasper",
+    "streetAddress": "Kasper",
+    "city": "Kasper"
   }
 ]

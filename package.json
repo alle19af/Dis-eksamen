@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon loadbalancer.js 8000 & nodemon server.js 8001 & nodemon server.js 8002 & nodemon server.js 8003 & nodemon server.js 8004"
+    "start": "nodemon loadBalancer.js 8000 & nodemon server.js 8001 & nodemon server.js 8002 & nodemon server.js 8003 & nodemon server.js 8004 & cd requests && (node clientReq.js & node reservationsReq.js)"
   },
   "author": "",
   "license": "ISC"

@@ -1,8 +1,7 @@
 const fs = require('fs');
-const clientStorage = JSON.parse(fs.readFileSync('/Users/alexandral.gonzalez/Desktop/Godk4/data/client.json', "utf-8"));
+const clientStorage = JSON.parse(fs.readFileSync('data/client.json', "utf-8"));
 
-
-
+//Opretter klassen med dens tilhørende CRUD metoder
 class Clients{ 
     constructor(clientID, firstName, lastName, streetAddress, City){
         this.clientID = clientID,
@@ -29,7 +28,7 @@ class Clients{
     postClient(payload){
         clientStorage.push(payload); // skubber brugeren ind i storage objektet
         //Skriver i filen user.json (DB) og laver vores storage om til JSON format således vi kan skrive brugeren ind der også er lavet om til JSON  
-        fs.writeFile('/Users/alexandral.gonzalez/Desktop/Godk4/data/client.json', JSON.stringify(clientStorage, null, 2), ()=> {
+        fs.writeFile('data/client.json', JSON.stringify(clientStorage, null, 2), ()=> {
         console.log("Writing in file");
         });
         return(payload.firstName + " " + payload.lastName + " Has been added to database");
@@ -41,10 +40,9 @@ class Clients{
                 clientStorage.splice(i,1);
               
                 // laver vores storage object til  string og indsætter i JSON   
-                    fs.writeFile('/Users/alexandral.gonzalez/Desktop/Godk4/data/client.json', JSON.stringify(clientStorage, null, 2), () => {
+                    fs.writeFile('data/client.json', JSON.stringify(clientStorage, null, 2), () => {
                            
                     });
-                    console.log(clientStorage);
                 return "Client with id: " + id  +  " has been deleted";
                 
             } 
@@ -77,7 +75,9 @@ class Clients{
         };
       // OBS FIND UD AF HVORFOR NEDENSTÅENDE VIRKER!!!!
         let userStorage = JSON.stringify(clientStorage, null, 2);
-        fs.writeFileSync('/Users/alexandral.gonzalez/Desktop/Godk4/data/client.json', userStorage, 'utf8')
+        fs.writeFileSync('data/client.json', userStorage, 'utf8', (err)=>{
+            return err;
+        })
         
         return "Client with id: " + id + " has been updated"
         // res.send("The profile has been updayed")

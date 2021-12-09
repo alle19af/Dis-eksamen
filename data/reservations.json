@@ -10,10 +10,10 @@
   {
     "ReservationID": "0002",
     "clientID": "2",
-    "date": "24-11-2021",
-    "hotelName": "XmasHotel",
-    "price": "12000",
-    "balance": "8000"
+    "date": "22-11-2019",
+    "hotelName": "XXXX",
+    "price": "XXXX",
+    "balance": "XXXX"
   },
   {
     "ReservationID": "0003",
@@ -24,27 +24,11 @@
     "balance": "20000"
   },
   {
-    "ReservationID": "0004",
-    "clientID": "4",
-    "date": "27-02-2022",
-    "hotelName": "Hotel-Flambuca",
-    "price": "98000",
-    "balance": "30000"
-  },
-  {
     "ReservationID": "0005",
     "clientID": "5",
-    "date": "01-01-2222",
-    "hotelName": "End of life Hotel",
-    "price": "50.000",
-    "balance": "1000"
-  },
-  {
-    "ReservationID": "0006",
-    "clientID": "6",
-    "date": "30-07-2027",
-    "hotelName": "Sunnebeach",
-    "price": "2700",
-    "balance": "200"
+    "date": "5",
+    "hotelName": "5",
+    "price": "5",
+    "balance": "5"
   }
 ]

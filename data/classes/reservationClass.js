@@ -1,7 +1,7 @@
 const fs = require('fs');
 const reservationStorage = JSON.parse(fs.readFileSync('/Users/alexandral.gonzalez/Desktop/Godk4/data/reservations.json', "utf8"));
 
-
+//Opretter klassen med dens tilhørende CRUD metoder
 class Reservations{
     constructor(ReservationID, clientID, date, hotelName, price, balance){
         this.ReservationID = ReservationID,
@@ -41,7 +41,7 @@ class Reservations{
                 // laver vores storage object til  string og indsætter i JSON   
                     fs.writeFile('/Users/alexandral.gonzalez/Desktop/Godk4/data/reservations.json', JSON.stringify(reservationStorage, null, 2), () => {
                     });
-                return "reservation with this id: " + id + "has been deleted";
+                return "reservation with this id: " + id + " has been deleted";
             } 
         } return "Reservation wasnt found";
     }
@@ -50,22 +50,20 @@ class Reservations{
 
         let id = payload.ReservationID;
         let clientsID = payload.clientID;
-        let stamp = payload.date;
+        let time = payload.date;
         let name = payload.hotelName;
         let cost = payload.price;    
         let left = payload.balance;   
 
-        console.log(payload.clientID);
+        console.log(payload.date);
        
-        //const storage = JSON.parse(fs.readFileSync('user.json'))
         const findBooking = reservationStorage.find((booking)=>  booking.ReservationID == id);
         
-
         if(clientsID) {
             findBooking.clientID = clientsID;
         };
-        if(stamp) {
-            findBooking.date = stamp;
+        if(time) {
+            findBooking.date = time;
         };
         if(name) {
             findBooking.hotelName = name;
@@ -76,13 +74,11 @@ class Reservations{
         if(left) {
             findBooking.balance = left;
         };
-      // OBS FIND UD AF HVORFOR NEDENSTÅENDE VIRKER!!!!
+   
         let bookingStorage = JSON.stringify(reservationStorage, null, 2);
         fs.writeFileSync('/Users/alexandral.gonzalez/Desktop/Godk4/data/reservations.json', bookingStorage, 'utf8')
         
         return "Reservation with id: " + id + " has been updated"
-        // res.send("The profile has been updayed")
-        // console.log("Client with id: " + id + " has been updated");
     }
 };
 

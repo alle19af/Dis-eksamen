@@ -1,6 +1,8 @@
 // Bibliotek
 const express = require('express');
 const fs = require('fs');
+// const clientReq = require('./requests/clientReq');
+// const reservationReq= require('./requests/reservationsReq');
 
 // Variables for servere
 const server = express();
@@ -16,7 +18,7 @@ let newBooking = new Reservations;
 // Genkender request objektet som JSON objekt
 server.use(express.json());
 
-// 01. ------------------- CRUD CLIENTS -----------------------//
+// 01. ------------------- HTTP req CLIENTS -----------------------//
 server.get('/clients', (req, res) => { //viser liste over samlede reservationer
     console.log("Package recieved on port: " + port);
     res.send(newClient.getClients());
@@ -37,7 +39,7 @@ server.post('/clients', (req, res) => {
 
 server.patch('/clients/:clientID', (req, res) => { 
     const id = req.params.clientID;
-    let payload = new Clients(id,req.body.firstName, req.body.lastName, req.body.streetAddress, req.body.city); 
+    let payload = new Clients(id,req.body.firstName, req.body.lastName, req.body.streetAddress, req.body.City); 
     console.log("Package recieved on port: " + port);
     res.send(newClient.updateClient(payload));
 });
@@ -49,7 +51,7 @@ server.delete('/clients/:clientID', (req, res) => {
 });
 
 
-// 02. ---------------- CRUD RESERVATIONS ----------------------- //
+// 02. ---------------- HTTP req RESERVATIONS ----------------------- //
 server.get('/reservations', (req, res) => { //viser liste over samlede reservationer
     console.log("Package recieved on port: " + port);
     res.send(newBooking.getReservations());
